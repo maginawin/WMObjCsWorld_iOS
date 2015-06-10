@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "WMBleManagerViewController.h"
 
 @interface ViewController ()
 
@@ -19,9 +20,11 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (IBAction)bleManagerDemo:(id)sender {
+    // 以下两种初始化方法都可以
+    //    WMBleManagerViewController* bmVC = [[WMBleManagerViewController alloc] initWithNibName:@"WMBleManagerViewController" bundle:nil];
+    WMBleManagerViewController* bmVC = [[WMBleManagerViewController alloc] init];
+    [self.navigationController pushViewController:bmVC animated:YES];
 }
 
 @end

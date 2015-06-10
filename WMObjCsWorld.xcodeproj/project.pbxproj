@@ -15,6 +15,12 @@
 		089315B91B27CA9A00765D3C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 089315B81B27CA9A00765D3C /* Images.xcassets */; };
 		089315BC1B27CA9A00765D3C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 089315BA1B27CA9A00765D3C /* LaunchScreen.xib */; };
 		089315C81B27CA9A00765D3C /* WMObjCsWorldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 089315C71B27CA9A00765D3C /* WMObjCsWorldTests.m */; };
+		089315D41B27CB3D00765D3C /* WMBleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 089315D31B27CB3D00765D3C /* WMBleManager.m */; };
+		089315D81B27CD6000765D3C /* WMBleManagerDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 089315D71B27CD6000765D3C /* WMBleManagerDemo.m */; };
+		089315DC1B27CE5400765D3C /* WMBleManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 089315DA1B27CE5400765D3C /* WMBleManagerViewController.m */; };
+		089315DD1B27CE5400765D3C /* WMBleManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 089315DB1B27CE5400765D3C /* WMBleManagerViewController.xib */; };
+		089315E41B27D8E000765D3C /* WMBleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 089315E21B27D8E000765D3C /* WMBleTableViewCell.m */; };
+		089315E51B27D8E000765D3C /* WMBleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 089315E31B27D8E000765D3C /* WMBleTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +48,17 @@
 		089315C11B27CA9A00765D3C /* WMObjCsWorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WMObjCsWorldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		089315C61B27CA9A00765D3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		089315C71B27CA9A00765D3C /* WMObjCsWorldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMObjCsWorldTests.m; sourceTree = "<group>"; };
+		089315D21B27CB3D00765D3C /* WMBleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMBleManager.h; sourceTree = "<group>"; };
+		089315D31B27CB3D00765D3C /* WMBleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMBleManager.m; sourceTree = "<group>"; };
+		089315D51B27CBC300765D3C /* prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = prefix.pch; sourceTree = "<group>"; };
+		089315D61B27CD6000765D3C /* WMBleManagerDemo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMBleManagerDemo.h; sourceTree = "<group>"; };
+		089315D71B27CD6000765D3C /* WMBleManagerDemo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMBleManagerDemo.m; sourceTree = "<group>"; };
+		089315D91B27CE5400765D3C /* WMBleManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMBleManagerViewController.h; sourceTree = "<group>"; };
+		089315DA1B27CE5400765D3C /* WMBleManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMBleManagerViewController.m; sourceTree = "<group>"; };
+		089315DB1B27CE5400765D3C /* WMBleManagerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMBleManagerViewController.xib; sourceTree = "<group>"; };
+		089315E11B27D8E000765D3C /* WMBleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMBleTableViewCell.h; sourceTree = "<group>"; };
+		089315E21B27D8E000765D3C /* WMBleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMBleTableViewCell.m; sourceTree = "<group>"; };
+		089315E31B27D8E000765D3C /* WMBleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMBleTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +100,7 @@
 		089315A71B27CA9A00765D3C /* WMObjCsWorld */ = {
 			isa = PBXGroup;
 			children = (
+				089315D11B27CAA800765D3C /* WMBleManager -- BLE 基类 */,
 				089315AC1B27CA9A00765D3C /* AppDelegate.h */,
 				089315AD1B27CA9A00765D3C /* AppDelegate.m */,
 				089315B21B27CA9A00765D3C /* ViewController.h */,
@@ -99,6 +117,7 @@
 		089315A81B27CA9A00765D3C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				089315D51B27CBC300765D3C /* prefix.pch */,
 				089315A91B27CA9A00765D3C /* Info.plist */,
 				089315AA1B27CA9A00765D3C /* main.m */,
 			);
@@ -120,6 +139,31 @@
 				089315C61B27CA9A00765D3C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		089315D11B27CAA800765D3C /* WMBleManager -- BLE 基类 */ = {
+			isa = PBXGroup;
+			children = (
+				089315D21B27CB3D00765D3C /* WMBleManager.h */,
+				089315D31B27CB3D00765D3C /* WMBleManager.m */,
+				089315E61B27E02A00765D3C /* Test */,
+			);
+			name = "WMBleManager -- BLE 基类";
+			sourceTree = "<group>";
+		};
+		089315E61B27E02A00765D3C /* Test */ = {
+			isa = PBXGroup;
+			children = (
+				089315D61B27CD6000765D3C /* WMBleManagerDemo.h */,
+				089315D71B27CD6000765D3C /* WMBleManagerDemo.m */,
+				089315D91B27CE5400765D3C /* WMBleManagerViewController.h */,
+				089315DA1B27CE5400765D3C /* WMBleManagerViewController.m */,
+				089315DB1B27CE5400765D3C /* WMBleManagerViewController.xib */,
+				089315E11B27D8E000765D3C /* WMBleTableViewCell.h */,
+				089315E21B27D8E000765D3C /* WMBleTableViewCell.m */,
+				089315E31B27D8E000765D3C /* WMBleTableViewCell.xib */,
+			);
+			name = Test;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,7 +246,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				089315DD1B27CE5400765D3C /* WMBleManagerViewController.xib in Resources */,
 				089315B71B27CA9A00765D3C /* Main.storyboard in Resources */,
+				089315E51B27D8E000765D3C /* WMBleTableViewCell.xib in Resources */,
 				089315BC1B27CA9A00765D3C /* LaunchScreen.xib in Resources */,
 				089315B91B27CA9A00765D3C /* Images.xcassets in Resources */,
 			);
@@ -222,7 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				089315D41B27CB3D00765D3C /* WMBleManager.m in Sources */,
+				089315E41B27D8E000765D3C /* WMBleTableViewCell.m in Sources */,
 				089315AE1B27CA9A00765D3C /* AppDelegate.m in Sources */,
+				089315DC1B27CE5400765D3C /* WMBleManagerViewController.m in Sources */,
+				089315D81B27CD6000765D3C /* WMBleManagerDemo.m in Sources */,
 				089315B11B27CA9A00765D3C /* WMObjCsWorld.xcdatamodeld in Sources */,
 				089315B41B27CA9A00765D3C /* ViewController.m in Sources */,
 				089315AB1B27CA9A00765D3C /* main.m in Sources */,
@@ -351,7 +401,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = /Users/maginawin/Documents/WwdDemo/WMObjCsWorld/WMObjCsWorld/prefix.pch;
 				INFOPLIST_FILE = WMObjCsWorld/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -361,7 +413,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = /Users/maginawin/Documents/WwdDemo/WMObjCsWorld/WMObjCsWorld/prefix.pch;
 				INFOPLIST_FILE = WMObjCsWorld/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
