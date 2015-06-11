@@ -6,8 +6,6 @@
 //  Copyright (c) 2015年 wendong wang. All rights reserved.
 //
 
-// BLE 的基类, 使用时请继承之后, 重写需要的方法, 记得重写前调用父类的方法以实现基本的功能
-
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
@@ -126,6 +124,14 @@ extern NSString* const kBleStopScanning;
  * @param peripheral : 需要断开的 peripheral
  */
 - (void)disconnectPeripheral:(CBPeripheral*)peripheral;
+
+/**
+ * @brief 自定义的 set notify value 方法, 包含了给  descriptor 赋值
+ * @param peripheral : 使用的 peripheral
+ * @param enabled : 是否 notify
+ * @param characteristic :  通知特性
+ */
+- (void)setPeripheral:(CBPeripheral*)peripheral notifyValue:(BOOL)enabled forCharacteristic:(CBCharacteristic*)characteristic;
 
 #pragma mark - Data handler
 

@@ -11,6 +11,8 @@
 
 // Use for save connected peripheral
 
+NSString* const kBleClientCharacteristicConfigUUIDString = @"00002902-0000-1000-8000-00805F9B34FB";
+
 NSString* const kBleSavedPeripheralIdentifier = @"kBleSavedPeripheralIdentifier";
 
 // Use for post central manager delegate notification
@@ -225,6 +227,19 @@ NSString* const kBleStopScanning = @"kBleStopScanning";
     [self peripheral:peripheral RSSI:RSSI error:error];
 }
 
+#pragma mark - Assistor
+
+- (void)setPeripheral:(CBPeripheral*)peripheral notifyValue:(BOOL)enabled forCharacteristic:(CBCharacteristic*)characteristic {
+    [peripheral setNotifyValue:enabled forCharacteristic:characteristic];
+    
+    for (CBDescriptor* descriptor in characteristic.descriptors) {
+        NSString* descriptorUUID = descriptor.UUID.UUIDString;
+        if ([[descriptorUUID uppercaseString] isEqualToString:kBleClientCharacteristicConfigUUIDString]) {
+            [peripheral writeValue:[WMBleManager hexDataFromHexString:@"0100"] forDescriptor:descriptor];
+        }
+    }
+}
+
 #pragma mark - Data handler
 
 + (NSString*)hexStringFromHexData:(NSData *)aData {
@@ -256,19 +271,19 @@ NSString* const kBleStopScanning = @"kBleStopScanning";
 }
 
 + (NSInteger)integerFromHexString:(NSString *)hexString {
-    unsigned int hexInt = 0;
+    unsigned long long hexInt = 0;
     // Create scanner
     NSScanner* scanner = [NSScanner scannerWithString:hexString];
     // Tell scanner to skip the # character
     [scanner setCharactersToBeSkipped:[NSCharacterSet characterSetWithCharactersInString:@"#"]];
     // Scan hex value
-    [scanner scanHexInt:&hexInt];
-    return hexInt;
+    [scanner scanHexLongLong:&hexInt];
+    return (long)hexInt;
 }
 
 + (NSString*)stringFromHexString:(NSString *)hexString {
     long int value = [self integerFromHexString:hexString];
-    return [NSString stringWithFormat:@"%ld", value];
+    return [NSString stringWithFormat:@"%02ld", value];
 }
 
 + (NSData*)hexDataFromString:(NSString *)aString {
