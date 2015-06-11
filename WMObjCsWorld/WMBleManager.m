@@ -144,6 +144,8 @@ NSString* const kBleStopScanning = @"kBleStopScanning";
 
 - (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
     
+    [peripheral discoverServices:nil];
+    
     [[NSNotificationCenter defaultCenter] postNotificationName:kBleCentralManagerDidConnectPeripheral object:peripheral];
     
     WMLog(@"didConnectPeripheral : %@", peripheral.name);

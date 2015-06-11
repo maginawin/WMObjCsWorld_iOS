@@ -6,6 +6,8 @@
 //  Copyright (c) 2015年 wendong wang. All rights reserved.
 //
 
+// BLE 的基类, 使用时请继承之后, 重写需要的方法, 记得重写前调用父类的方法以实现基本的功能
+
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 
