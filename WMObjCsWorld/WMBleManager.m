@@ -55,7 +55,8 @@ NSString* const kBleStopScanning = @"kBleStopScanning";
 - (id)init {
     self = [super init];
     if (self) {
-        _mCentralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
+        dispatch_queue_t centralQueue = dispatch_queue_create("cenralQueue", DISPATCH_QUEUE_SERIAL);
+        _mCentralManager = [[CBCentralManager alloc] initWithDelegate:self queue:centralQueue options:nil];
     }
     return self;
 }
@@ -76,14 +77,16 @@ NSString* const kBleStopScanning = @"kBleStopScanning";
 
 - (void)startScanningForUUIDString:(NSString *)uuidString {
     [self stopScanning];
-    NSDictionary* options = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:YES] forKey:CBCentralManagerScanOptionSolicitedServiceUUIDsKey];
+
+    NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:YES], CBCentralManagerScanOptionAllowDuplicatesKey, nil];
     if (uuidString) {
-        NSArray* uuidArray = [NSArray arrayWithObjects:[CBUUID UUIDWithString:uuidString], nil];
+        NSArray* uuidArray = [NSArray arrayWithObject:[CBUUID UUIDWithString:uuidString]];
         
         [_mCentralManager scanForPeripheralsWithServices:uuidArray options:options];
     } else {
-        [_mCentralManager scanForPeripheralsWithServices:nil options:nil];
+        [_mCentralManager scanForPeripheralsWithServices:nil options:options];
     }
+    
     [[NSNotificationCenter defaultCenter] postNotificationName:kBleStartScanning object:nil];
     
     WMLog(@"startScanningForUUIDString : %@", uuidString ? uuidString : @"nil");
@@ -97,8 +100,10 @@ NSString* const kBleStopScanning = @"kBleStopScanning";
 }
 
 - (void)connectPeripheral:(CBPeripheral *)peripheral {
-    if (peripheral && peripheral.state != CBPeripheralStateConnected) {
-        [_mCentralManager connectPeripheral:peripheral options:nil];
+    if (peripheral) {
+        NSDictionary *options = [NSDictionary dictionaryWithObject:[NSNumber numberWithBool:YES] forKey:CBConnectPeripheralOptionNotifyOnNotificationKey];
+        peripheral.delegate = self;
+        [_mCentralManager connectPeripheral:peripheral options:options];
     }
     
     WMLog(@"connectPeripheral : %@", peripheral.name);
@@ -155,6 +160,14 @@ NSString* const kBleStopScanning = @"kBleStopScanning";
 
 - (void)centralManager:(CBCentralManager *)central didDisconnectPeripheral:(CBPeripheral *)peripheral error:(NSError *)error {
     
+    if (error) {
+        [central cancelPeripheralConnection:peripheral];
+        
+        WMLog(@"didDisconnectPeripheral error : %@", error);
+
+        return;
+    }
+    
     [[NSNotificationCenter defaultCenter] postNotificationName:kBleCentralManagerDidDisconnectPeripheral object:peripheral];
     
     WMLog(@"didDisconnectPeripheral : %@", peripheral.name);
@@ -169,7 +182,10 @@ NSString* const kBleStopScanning = @"kBleStopScanning";
 
 #pragma mark - Peripheral delegate
 
-- (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error {
+- (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error {    
+    if (error) {
+        return;
+    }
     
     [[NSNotificationCenter defaultCenter] postNotificationName:kBlePeripheralDidDiscoverServices object:peripheral];
     
@@ -182,6 +198,9 @@ NSString* const kBleStopScanning = @"kBleStopScanning";
 }
 
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error {
+    if (error) {
+        return;
+    }
     
     NSArray* sendObjects = [NSArray arrayWithObjects:peripheral, service, nil];
     [[NSNotificationCenter defaultCenter] postNotificationName:kBlePeripheralDidDiscoverCharacteristicsForService object:sendObjects];
@@ -207,7 +226,7 @@ NSString* const kBleStopScanning = @"kBleStopScanning";
     NSArray* sendObjects = [NSArray arrayWithObjects:peripheral, characteristic, nil];
     [[NSNotificationCenter defaultCenter] postNotificationName:kBlePeripheralDidWriteValueForCharacteristic object:sendObjects];
     
-    WMLog(@"peripheral : %@ didWriteValue : %@", peripheral.name, [WMBleManager hexStringFromHexData:characteristic.value]);
+    WMLog(@"peripheral : %@ didWriteValue : %@", peripheral.name, characteristic.value);
 }
 
 - (void)peripheral:(CBPeripheral*)peripheral RSSI:(NSNumber*)RSSI error:(NSError*)error {

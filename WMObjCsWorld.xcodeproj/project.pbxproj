@@ -20,7 +20,7 @@
 		089315DD1B27CE5400765D3C /* WMBleManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 089315DB1B27CE5400765D3C /* WMBleManagerViewController.xib */; };
 		089315E41B27D8E000765D3C /* WMBleTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 089315E21B27D8E000765D3C /* WMBleTableViewCell.m */; };
 		089315E51B27D8E000765D3C /* WMBleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 089315E31B27D8E000765D3C /* WMBleTableViewCell.xib */; };
-		08DEBCA61B299B4600884BDD /* WMBleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 08DEBCA51B299B4600884BDD /* WMBleManager.m */; };
+		08F43C211B2AA83300061B93 /* WMBleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F43C201B2AA83300061B93 /* WMBleManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +57,8 @@
 		089315E11B27D8E000765D3C /* WMBleTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMBleTableViewCell.h; sourceTree = "<group>"; };
 		089315E21B27D8E000765D3C /* WMBleTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMBleTableViewCell.m; sourceTree = "<group>"; };
 		089315E31B27D8E000765D3C /* WMBleTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMBleTableViewCell.xib; sourceTree = "<group>"; };
-		08DEBCA41B299B4600884BDD /* WMBleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMBleManager.h; sourceTree = "<group>"; };
-		08DEBCA51B299B4600884BDD /* WMBleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMBleManager.m; sourceTree = "<group>"; };
+		08F43C1F1B2AA83300061B93 /* WMBleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMBleManager.h; sourceTree = "<group>"; };
+		08F43C201B2AA83300061B93 /* WMBleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMBleManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,8 +144,8 @@
 		089315D11B27CAA800765D3C /* WMBleManager -- BLE 基类 */ = {
 			isa = PBXGroup;
 			children = (
-				08DEBCA41B299B4600884BDD /* WMBleManager.h */,
-				08DEBCA51B299B4600884BDD /* WMBleManager.m */,
+				08F43C1F1B2AA83300061B93 /* WMBleManager.h */,
+				08F43C201B2AA83300061B93 /* WMBleManager.m */,
 				089315E61B27E02A00765D3C /* Test */,
 			);
 			name = "WMBleManager -- BLE 基类";
@@ -271,7 +271,7 @@
 				089315E41B27D8E000765D3C /* WMBleTableViewCell.m in Sources */,
 				089315AE1B27CA9A00765D3C /* AppDelegate.m in Sources */,
 				089315DC1B27CE5400765D3C /* WMBleManagerViewController.m in Sources */,
-				08DEBCA61B299B4600884BDD /* WMBleManager.m in Sources */,
+				08F43C211B2AA83300061B93 /* WMBleManager.m in Sources */,
 				089315D81B27CD6000765D3C /* WMBleManagerDemo.m in Sources */,
 				089315B11B27CA9A00765D3C /* WMObjCsWorld.xcdatamodeld in Sources */,
 				089315B41B27CA9A00765D3C /* ViewController.m in Sources */,
