@@ -28,6 +28,15 @@
     return components.day;
 }
 
+- (int)dayOfWeek {
+    NSCalendar* gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents* comps = [[NSDateComponents alloc] init];
+    NSInteger unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitWeekday | NSCalendarUnitDay;
+    comps = [gregorian components:unitFlags fromDate:self];
+    NSUInteger weekDay = [comps weekday];
+    return weekDay;
+}
+
 - (NSUInteger)numberOfDaysInCurrentMonth {
     return [[NSCalendar currentCalendar] rangeOfUnit:NSCalendarUnitDay inUnit:NSCalendarUnitMonth forDate:self].length;
 }

@@ -36,6 +36,7 @@
     WMLog(@"这个月第一天是星期 : %d", [[date lastMonthDate:date] firstWeekDayInMonth]);
     WMLog(@"上一个月的日期是 : %@", [date lastMonthDate:date]);
     WMLog(@"下一个月的日期是 : %@", [date nextMonthDate:date]);
+    WMLog(@"今天是星期第几 : %d", [date dayOfWeek]);
 }
 
 

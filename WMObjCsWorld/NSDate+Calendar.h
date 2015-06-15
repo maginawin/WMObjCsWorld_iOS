@@ -26,6 +26,11 @@
 - (int)day;
 
 /**
+ * @return 当前日期在一周中的天数, 周日 ~ 周六 1 ~ 7
+ */
+- (int)dayOfWeek;
+
+/**
  * @return 当前月有多少天
  */
 - (NSUInteger)numberOfDaysInCurrentMonth;
