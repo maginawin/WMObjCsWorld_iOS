@@ -126,12 +126,12 @@ extern NSString* const kBleStopScanning;
 - (void)disconnectPeripheral:(CBPeripheral*)peripheral;
 
 /**
- * @brief 自定义的 set notify value 方法, 包含了给  descriptor 赋值
+ * @brief 自定义的 set notify value 方法, 包含了给  descriptor 赋值 (然并卵)
  * @param peripheral : 使用的 peripheral
  * @param enabled : 是否 notify
  * @param characteristic :  通知特性
  */
-- (void)setPeripheral:(CBPeripheral*)peripheral notifyValue:(BOOL)enabled forCharacteristic:(CBCharacteristic*)characteristic;
+//- (void)setPeripheral:(CBPeripheral*)peripheral notifyValue:(BOOL)enabled forCharacteristic:(CBCharacteristic*)characteristic;
 
 #pragma mark - Data handler
 
