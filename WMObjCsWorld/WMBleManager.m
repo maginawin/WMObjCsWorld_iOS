@@ -84,7 +84,8 @@ NSString* const kBleStopScanning = @"kBleStopScanning";
         
         [_mCentralManager scanForPeripheralsWithServices:uuidArray options:options];
     } else {
-        [_mCentralManager scanForPeripheralsWithServices:nil options:options];
+        // 不需要重复发现
+        [_mCentralManager scanForPeripheralsWithServices:nil options:nil];
     }
     
     [[NSNotificationCenter defaultCenter] postNotificationName:kBleStartScanning object:nil];
