@@ -10,7 +10,7 @@
 
 @protocol WMCountDownLabelDelegate <NSObject>
 
-@required
+@optional
 
 /**
  * @brief 倒计时开始
