@@ -44,6 +44,30 @@
                                                     <action selector="dateCalendarTestClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="e3I-UB-tQ3"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7b-Gc-MsD">
+                                                <rect key="frame" x="8" y="84" width="75" height="30"/>
+                                                <state key="normal" title="倒计时开始">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="startCountDownClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="5l3-Vv-GWn"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3z4-EZ-nb5" customClass="WMCountDownLabel">
+                                                <rect key="frame" x="174" y="88" width="138" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="0.14539033174514771" green="0.63518619537353516" blue="0.304024338722229" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dF9-MJ-Mht">
+                                                <rect key="frame" x="91" y="84" width="75" height="30"/>
+                                                <state key="normal" title="倒计时停止">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="stopCountDownClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="aQt-kk-9L6"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -72,6 +96,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="ObjCs World" id="nx1-0h-dyT"/>
+                    <connections>
+                        <outlet property="countDownLabel" destination="3z4-EZ-nb5" id="aIG-bG-kZe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

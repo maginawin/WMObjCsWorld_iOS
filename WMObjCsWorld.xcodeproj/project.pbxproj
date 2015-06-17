@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08662A861B310ED9009BDD6D /* WMCountDownLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 08662A851B310ED9009BDD6D /* WMCountDownLabel.m */; };
 		089315AB1B27CA9A00765D3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 089315AA1B27CA9A00765D3C /* main.m */; };
 		089315AE1B27CA9A00765D3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 089315AD1B27CA9A00765D3C /* AppDelegate.m */; };
 		089315B11B27CA9A00765D3C /* WMObjCsWorld.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 089315AF1B27CA9A00765D3C /* WMObjCsWorld.xcdatamodeld */; };
@@ -35,6 +36,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08662A841B310ED9009BDD6D /* WMCountDownLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCountDownLabel.h; sourceTree = "<group>"; };
+		08662A851B310ED9009BDD6D /* WMCountDownLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCountDownLabel.m; sourceTree = "<group>"; };
 		089315A51B27CA9A00765D3C /* WMObjCsWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WMObjCsWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		089315A91B27CA9A00765D3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		089315AA1B27CA9A00765D3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -82,6 +85,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		08662A831B310EB0009BDD6D /* 倒计时 Label */ = {
+			isa = PBXGroup;
+			children = (
+				08662A841B310ED9009BDD6D /* WMCountDownLabel.h */,
+				08662A851B310ED9009BDD6D /* WMCountDownLabel.m */,
+			);
+			name = "倒计时 Label";
+			sourceTree = "<group>";
+		};
 		0893159C1B27CA9A00765D3C = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +115,7 @@
 		089315A71B27CA9A00765D3C /* WMObjCsWorld */ = {
 			isa = PBXGroup;
 			children = (
+				08662A831B310EB0009BDD6D /* 倒计时 Label */,
 				08F18FDC1B2EC7980042AFA7 /* 日期 */,
 				089315D11B27CAA800765D3C /* WMBleManager -- BLE 基类 */,
 				089315AC1B27CA9A00765D3C /* AppDelegate.h */,
@@ -289,6 +302,7 @@
 				089315B11B27CA9A00765D3C /* WMObjCsWorld.xcdatamodeld in Sources */,
 				089315B41B27CA9A00765D3C /* ViewController.m in Sources */,
 				089315AB1B27CA9A00765D3C /* main.m in Sources */,
+				08662A861B310ED9009BDD6D /* WMCountDownLabel.m in Sources */,
 				08F18FDF1B2EC7C80042AFA7 /* NSDate+Calendar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

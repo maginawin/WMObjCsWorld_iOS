@@ -9,8 +9,12 @@
 #import "ViewController.h"
 #import "WMBleManagerViewController.h"
 #import "NSDate+Calendar.h"
+#import "WMCountDownLabel.h"
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet WMCountDownLabel *countDownLabel;
+
 
 @end
 
@@ -37,6 +41,15 @@
     WMLog(@"上一个月的日期是 : %@", [date lastMonthDate:date]);
     WMLog(@"下一个月的日期是 : %@", [date nextMonthDate:date]);
     WMLog(@"今天是星期第几 : %d", [date dayOfWeek]);
+}
+
+- (IBAction)startCountDownClick:(id)sender {
+    [_countDownLabel setupCountDownSeconds:888];
+    [_countDownLabel start];
+}
+
+- (IBAction)stopCountDownClick:(id)sender {
+    [_countDownLabel stop];
 }
 
 
