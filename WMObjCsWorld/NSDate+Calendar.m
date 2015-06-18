@@ -13,19 +13,19 @@
 - (int)year {
     NSCalendar* gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDateComponents* components = [gregorian components:NSCalendarUnitYear fromDate:self];
-    return components.year;
+    return (int)components.year;
 }
 
 - (int)month {
     NSCalendar* gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDateComponents* components = [gregorian components:NSCalendarUnitMonth fromDate:self];
-    return components.month;
+    return (int)components.month;
 }
 
 - (int)day {
     NSCalendar* gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDateComponents* components = [gregorian components:NSCalendarUnitDay fromDate:self];
-    return components.day;
+    return (int)components.day;
 }
 
 - (int)dayOfWeek {
@@ -34,7 +34,7 @@
     NSInteger unitFlags = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitWeekday | NSCalendarUnitDay;
     comps = [gregorian components:unitFlags fromDate:self];
     NSUInteger weekDay = [comps weekday];
-    return weekDay;
+    return (int)weekDay;
 }
 
 - (NSUInteger)numberOfDaysInCurrentMonth {
@@ -49,7 +49,7 @@
     [comps setDay:1];
     NSDate* newDate = [gregorian dateFromComponents:comps];
     
-    return (8 - [gregorian ordinalityOfUnit:NSCalendarUnitWeekday inUnit:NSCalendarUnitWeekOfMonth forDate:newDate]);
+    return (int)(8 - [gregorian ordinalityOfUnit:NSCalendarUnitWeekday inUnit:NSCalendarUnitWeekOfMonth forDate:newDate]);
 }
 
 - (NSUInteger)numberOfWeeksInCurrentMonth {

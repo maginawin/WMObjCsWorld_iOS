@@ -160,16 +160,16 @@
     
     NSInteger min = seconds / 60;
     if (min < 10) {
-        minString = [NSString stringWithFormat:@"0%d", min];
+        minString = [NSString stringWithFormat:@"0%d", (int)min];
     } else {
-        minString = [NSString stringWithFormat:@"%d", min];
+        minString = [NSString stringWithFormat:@"%d", (int)min];
     }
     
     NSInteger second = seconds % 60;
     if (second < 10) {
-        secondString = [NSString stringWithFormat:@"0%d", second];
+        secondString = [NSString stringWithFormat:@"0%d", (int)second];
     } else {
-        secondString = [NSString stringWithFormat:@"%d", second];
+        secondString = [NSString stringWithFormat:@"%d", (int)second];
     }
     
     NSString* time = [NSString stringWithFormat:@"%@ : %@", minString, secondString];
