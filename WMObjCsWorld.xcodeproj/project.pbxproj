@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		0805B9A61B324E5D003D2B10 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 0805B9A51B324E5D003D2B10 /* libsqlite3.dylib */; };
+		0805B9AA1B325029003D2B10 /* WMSQLiteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0805B9A81B325029003D2B10 /* WMSQLiteViewController.m */; };
+		0805B9AB1B325029003D2B10 /* WMSQLiteViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0805B9A91B325029003D2B10 /* WMSQLiteViewController.xib */; };
+		0805B9AF1B32514B003D2B10 /* WMSQLiteTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0805B9AD1B32514B003D2B10 /* WMSQLiteTableViewController.m */; };
+		0805B9B01B32514B003D2B10 /* WMSQLiteTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0805B9AE1B32514B003D2B10 /* WMSQLiteTableViewController.xib */; };
+		0805B9B41B32518A003D2B10 /* WMSQLiteTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0805B9B21B32518A003D2B10 /* WMSQLiteTableViewCell.m */; };
+		0805B9B51B32518A003D2B10 /* WMSQLiteTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0805B9B31B32518A003D2B10 /* WMSQLiteTableViewCell.xib */; };
+		0805B9B81B3258D4003D2B10 /* WMWord.m in Sources */ = {isa = PBXBuildFile; fileRef = 0805B9B71B3258D4003D2B10 /* WMWord.m */; };
+		0805B9BC1B32913E003D2B10 /* WMSQLiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0805B9BB1B32913E003D2B10 /* WMSQLiteManager.m */; };
+		0805B9BF1B32942A003D2B10 /* WMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0805B9BE1B32942A003D2B10 /* WMUser.m */; };
+		0805B9C31B329E1A003D2B10 /* WMSQLiteUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0805B9C11B329E1A003D2B10 /* WMSQLiteUserViewController.m */; };
+		0805B9C41B329E1A003D2B10 /* WMSQLiteUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0805B9C21B329E1A003D2B10 /* WMSQLiteUserViewController.xib */; };
 		08662A861B310ED9009BDD6D /* WMCountDownLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 08662A851B310ED9009BDD6D /* WMCountDownLabel.m */; };
 		089315AB1B27CA9A00765D3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 089315AA1B27CA9A00765D3C /* main.m */; };
 		089315AE1B27CA9A00765D3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 089315AD1B27CA9A00765D3C /* AppDelegate.m */; };
@@ -38,6 +49,24 @@
 
 /* Begin PBXFileReference section */
 		0805B9A51B324E5D003D2B10 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		0805B9A71B325029003D2B10 /* WMSQLiteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMSQLiteViewController.h; sourceTree = "<group>"; };
+		0805B9A81B325029003D2B10 /* WMSQLiteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMSQLiteViewController.m; sourceTree = "<group>"; };
+		0805B9A91B325029003D2B10 /* WMSQLiteViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMSQLiteViewController.xib; sourceTree = "<group>"; };
+		0805B9AC1B32514B003D2B10 /* WMSQLiteTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMSQLiteTableViewController.h; sourceTree = "<group>"; };
+		0805B9AD1B32514B003D2B10 /* WMSQLiteTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMSQLiteTableViewController.m; sourceTree = "<group>"; };
+		0805B9AE1B32514B003D2B10 /* WMSQLiteTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMSQLiteTableViewController.xib; sourceTree = "<group>"; };
+		0805B9B11B32518A003D2B10 /* WMSQLiteTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMSQLiteTableViewCell.h; sourceTree = "<group>"; };
+		0805B9B21B32518A003D2B10 /* WMSQLiteTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMSQLiteTableViewCell.m; sourceTree = "<group>"; };
+		0805B9B31B32518A003D2B10 /* WMSQLiteTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMSQLiteTableViewCell.xib; sourceTree = "<group>"; };
+		0805B9B61B3258D4003D2B10 /* WMWord.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMWord.h; sourceTree = "<group>"; };
+		0805B9B71B3258D4003D2B10 /* WMWord.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMWord.m; sourceTree = "<group>"; };
+		0805B9BA1B32913E003D2B10 /* WMSQLiteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMSQLiteManager.h; sourceTree = "<group>"; };
+		0805B9BB1B32913E003D2B10 /* WMSQLiteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMSQLiteManager.m; sourceTree = "<group>"; };
+		0805B9BD1B32942A003D2B10 /* WMUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMUser.h; sourceTree = "<group>"; };
+		0805B9BE1B32942A003D2B10 /* WMUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMUser.m; sourceTree = "<group>"; };
+		0805B9C01B329E1A003D2B10 /* WMSQLiteUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMSQLiteUserViewController.h; sourceTree = "<group>"; };
+		0805B9C11B329E1A003D2B10 /* WMSQLiteUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMSQLiteUserViewController.m; sourceTree = "<group>"; };
+		0805B9C21B329E1A003D2B10 /* WMSQLiteUserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMSQLiteUserViewController.xib; sourceTree = "<group>"; };
 		08662A841B310ED9009BDD6D /* WMCountDownLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCountDownLabel.h; sourceTree = "<group>"; };
 		08662A851B310ED9009BDD6D /* WMCountDownLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCountDownLabel.m; sourceTree = "<group>"; };
 		089315A51B27CA9A00765D3C /* WMObjCsWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WMObjCsWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,9 +128,34 @@
 		0805B9A41B324E1D003D2B10 /* SQLite */ = {
 			isa = PBXGroup;
 			children = (
-				0805B9A51B324E5D003D2B10 /* libsqlite3.dylib */,
+				0805B9BA1B32913E003D2B10 /* WMSQLiteManager.h */,
+				0805B9BB1B32913E003D2B10 /* WMSQLiteManager.m */,
+				0805B9BD1B32942A003D2B10 /* WMUser.h */,
+				0805B9BE1B32942A003D2B10 /* WMUser.m */,
+				0805B9C01B329E1A003D2B10 /* WMSQLiteUserViewController.h */,
+				0805B9C11B329E1A003D2B10 /* WMSQLiteUserViewController.m */,
+				0805B9C21B329E1A003D2B10 /* WMSQLiteUserViewController.xib */,
+				0805B9B91B32911C003D2B10 /* Learn Guide */,
 			);
 			name = SQLite;
+			sourceTree = "<group>";
+		};
+		0805B9B91B32911C003D2B10 /* Learn Guide */ = {
+			isa = PBXGroup;
+			children = (
+				0805B9A71B325029003D2B10 /* WMSQLiteViewController.h */,
+				0805B9A81B325029003D2B10 /* WMSQLiteViewController.m */,
+				0805B9A91B325029003D2B10 /* WMSQLiteViewController.xib */,
+				0805B9AC1B32514B003D2B10 /* WMSQLiteTableViewController.h */,
+				0805B9AD1B32514B003D2B10 /* WMSQLiteTableViewController.m */,
+				0805B9AE1B32514B003D2B10 /* WMSQLiteTableViewController.xib */,
+				0805B9B11B32518A003D2B10 /* WMSQLiteTableViewCell.h */,
+				0805B9B21B32518A003D2B10 /* WMSQLiteTableViewCell.m */,
+				0805B9B31B32518A003D2B10 /* WMSQLiteTableViewCell.xib */,
+				0805B9B61B3258D4003D2B10 /* WMWord.h */,
+				0805B9B71B3258D4003D2B10 /* WMWord.m */,
+			);
+			name = "Learn Guide";
 			sourceTree = "<group>";
 		};
 		08662A831B310EB0009BDD6D /* 倒计时 Label */ = {
@@ -116,6 +170,7 @@
 		0893159C1B27CA9A00765D3C = {
 			isa = PBXGroup;
 			children = (
+				0805B9A51B324E5D003D2B10 /* libsqlite3.dylib */,
 				089315A71B27CA9A00765D3C /* WMObjCsWorld */,
 				089315C41B27CA9A00765D3C /* WMObjCsWorldTests */,
 				089315A61B27CA9A00765D3C /* Products */,
@@ -295,7 +350,11 @@
 				089315DD1B27CE5400765D3C /* WMBleManagerViewController.xib in Resources */,
 				089315B71B27CA9A00765D3C /* Main.storyboard in Resources */,
 				089315E51B27D8E000765D3C /* WMBleTableViewCell.xib in Resources */,
+				0805B9B51B32518A003D2B10 /* WMSQLiteTableViewCell.xib in Resources */,
 				089315BC1B27CA9A00765D3C /* LaunchScreen.xib in Resources */,
+				0805B9B01B32514B003D2B10 /* WMSQLiteTableViewController.xib in Resources */,
+				0805B9C41B329E1A003D2B10 /* WMSQLiteUserViewController.xib in Resources */,
+				0805B9AB1B325029003D2B10 /* WMSQLiteViewController.xib in Resources */,
 				089315B91B27CA9A00765D3C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -314,15 +373,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0805B9AA1B325029003D2B10 /* WMSQLiteViewController.m in Sources */,
+				0805B9AF1B32514B003D2B10 /* WMSQLiteTableViewController.m in Sources */,
 				089315E41B27D8E000765D3C /* WMBleTableViewCell.m in Sources */,
 				089315AE1B27CA9A00765D3C /* AppDelegate.m in Sources */,
 				089315DC1B27CE5400765D3C /* WMBleManagerViewController.m in Sources */,
 				08F43C211B2AA83300061B93 /* WMBleManager.m in Sources */,
+				0805B9BF1B32942A003D2B10 /* WMUser.m in Sources */,
 				089315D81B27CD6000765D3C /* WMBleManagerDemo.m in Sources */,
 				089315B11B27CA9A00765D3C /* WMObjCsWorld.xcdatamodeld in Sources */,
 				089315B41B27CA9A00765D3C /* ViewController.m in Sources */,
+				0805B9B81B3258D4003D2B10 /* WMWord.m in Sources */,
 				089315AB1B27CA9A00765D3C /* main.m in Sources */,
 				08662A861B310ED9009BDD6D /* WMCountDownLabel.m in Sources */,
+				0805B9BC1B32913E003D2B10 /* WMSQLiteManager.m in Sources */,
+				0805B9B41B32518A003D2B10 /* WMSQLiteTableViewCell.m in Sources */,
+				0805B9C31B329E1A003D2B10 /* WMSQLiteUserViewController.m in Sources */,
 				08F18FDF1B2EC7C80042AFA7 /* NSDate+Calendar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,6 +10,8 @@
 #import "WMBleManagerViewController.h"
 #import "NSDate+Calendar.h"
 #import "WMCountDownLabel.h"
+#import "WMSQLiteViewController.h"
+#import "WMSQLiteUserViewController.h"
 
 @interface ViewController ()
 
@@ -53,8 +55,13 @@
 }
 
 - (IBAction)sqliteClick:(id)sender {
+    WMSQLiteViewController* sqliteVC = [[WMSQLiteViewController alloc] initWithNibName:@"WMSQLiteViewController" bundle:nil];
+    [self.navigationController pushViewController:sqliteVC animated:YES];
 }
 
-
+- (IBAction)sqliteWithUserClick:(id)sender {
+    WMSQLiteUserViewController* sqliteUserVC = [[WMSQLiteUserViewController alloc] initWithNibName:@"WMSQLiteUserViewController" bundle:nil];
+    [self.navigationController pushViewController:sqliteUserVC animated:YES];
+}
 
 @end
