@@ -56,4 +56,9 @@
     }
 }
 
+- (IBAction)editingChanged:(id)sender {
+    _addressField.text = [sender text];
+}
+
+
 @end
