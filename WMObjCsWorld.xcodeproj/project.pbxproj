@@ -19,6 +19,7 @@
 		0805B9BF1B32942A003D2B10 /* WMUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0805B9BE1B32942A003D2B10 /* WMUser.m */; };
 		0805B9C31B329E1A003D2B10 /* WMSQLiteUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0805B9C11B329E1A003D2B10 /* WMSQLiteUserViewController.m */; };
 		0805B9C41B329E1A003D2B10 /* WMSQLiteUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0805B9C21B329E1A003D2B10 /* WMSQLiteUserViewController.xib */; };
+		082D15DF1B33A7C5002AE09F /* WMCircleProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 082D15DE1B33A7C5002AE09F /* WMCircleProgress.m */; };
 		08662A861B310ED9009BDD6D /* WMCountDownLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 08662A851B310ED9009BDD6D /* WMCountDownLabel.m */; };
 		089315AB1B27CA9A00765D3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 089315AA1B27CA9A00765D3C /* main.m */; };
 		089315AE1B27CA9A00765D3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 089315AD1B27CA9A00765D3C /* AppDelegate.m */; };
@@ -67,6 +68,8 @@
 		0805B9C01B329E1A003D2B10 /* WMSQLiteUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMSQLiteUserViewController.h; sourceTree = "<group>"; };
 		0805B9C11B329E1A003D2B10 /* WMSQLiteUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMSQLiteUserViewController.m; sourceTree = "<group>"; };
 		0805B9C21B329E1A003D2B10 /* WMSQLiteUserViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMSQLiteUserViewController.xib; sourceTree = "<group>"; };
+		082D15DD1B33A7C5002AE09F /* WMCircleProgress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCircleProgress.h; sourceTree = "<group>"; };
+		082D15DE1B33A7C5002AE09F /* WMCircleProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCircleProgress.m; sourceTree = "<group>"; };
 		08662A841B310ED9009BDD6D /* WMCountDownLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCountDownLabel.h; sourceTree = "<group>"; };
 		08662A851B310ED9009BDD6D /* WMCountDownLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCountDownLabel.m; sourceTree = "<group>"; };
 		089315A51B27CA9A00765D3C /* WMObjCsWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WMObjCsWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -158,6 +161,23 @@
 			name = "Learn Guide";
 			sourceTree = "<group>";
 		};
+		082D15DB1B33A7A1002AE09F /* 进度条 */ = {
+			isa = PBXGroup;
+			children = (
+				082D15DC1B33A7A8002AE09F /* 圆形进度条 */,
+			);
+			name = "进度条";
+			sourceTree = "<group>";
+		};
+		082D15DC1B33A7A8002AE09F /* 圆形进度条 */ = {
+			isa = PBXGroup;
+			children = (
+				082D15DD1B33A7C5002AE09F /* WMCircleProgress.h */,
+				082D15DE1B33A7C5002AE09F /* WMCircleProgress.m */,
+			);
+			name = "圆形进度条";
+			sourceTree = "<group>";
+		};
 		08662A831B310EB0009BDD6D /* 倒计时 Label */ = {
 			isa = PBXGroup;
 			children = (
@@ -189,6 +209,7 @@
 		089315A71B27CA9A00765D3C /* WMObjCsWorld */ = {
 			isa = PBXGroup;
 			children = (
+				082D15DB1B33A7A1002AE09F /* 进度条 */,
 				0805B9A31B324E16003D2B10 /* SQL */,
 				08662A831B310EB0009BDD6D /* 倒计时 Label */,
 				08F18FDC1B2EC7980042AFA7 /* 日期 */,
@@ -375,6 +396,7 @@
 			files = (
 				0805B9AA1B325029003D2B10 /* WMSQLiteViewController.m in Sources */,
 				0805B9AF1B32514B003D2B10 /* WMSQLiteTableViewController.m in Sources */,
+				082D15DF1B33A7C5002AE09F /* WMCircleProgress.m in Sources */,
 				089315E41B27D8E000765D3C /* WMBleTableViewCell.m in Sources */,
 				089315AE1B27CA9A00765D3C /* AppDelegate.m in Sources */,
 				089315DC1B27CE5400765D3C /* WMBleManagerViewController.m in Sources */,

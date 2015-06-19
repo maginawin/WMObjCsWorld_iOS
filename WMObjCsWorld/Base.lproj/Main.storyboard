@@ -23,6 +23,10 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iYJ-kU-tmM">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                                         <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rro-pO-lLj" customClass="WMCircleProgress">
+                                                <rect key="frame" x="160" y="0.0" width="160" height="252"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Iwk-zj-zts">
                                                 <rect key="frame" x="8" y="8" width="304" height="30"/>
                                                 <constraints>
@@ -86,6 +90,15 @@
                                                     <action selector="sqliteWithUserClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ysh-5s-ec4"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="af7-yI-feF">
+                                                <rect key="frame" x="8" y="160" width="134" height="30"/>
+                                                <state key="normal" title="圆形进度条">
+                                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="circleProgressClick:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="xx6-as-9mD"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -115,6 +128,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="ObjCs World" id="nx1-0h-dyT"/>
                     <connections>
+                        <outlet property="circleProgress" destination="Rro-pO-lLj" id="qFO-zx-61I"/>
                         <outlet property="countDownLabel" destination="3z4-EZ-nb5" id="aIG-bG-kZe"/>
                     </connections>
                 </viewController>

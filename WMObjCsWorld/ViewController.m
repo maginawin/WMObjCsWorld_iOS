@@ -12,11 +12,13 @@
 #import "WMCountDownLabel.h"
 #import "WMSQLiteViewController.h"
 #import "WMSQLiteUserViewController.h"
+#import "WMCircleProgress.h"
 
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet WMCountDownLabel *countDownLabel;
 
+@property (weak, nonatomic) IBOutlet WMCircleProgress *circleProgress;
 
 @end
 
@@ -63,5 +65,11 @@
     WMSQLiteUserViewController* sqliteUserVC = [[WMSQLiteUserViewController alloc] initWithNibName:@"WMSQLiteUserViewController" bundle:nil];
     [self.navigationController pushViewController:sqliteUserVC animated:YES];
 }
+
+- (IBAction)circleProgressClick:(id)sender {
+    float randomCurrent = arc4random() % 101 / 100.00;
+    [_circleProgress setCurrent:randomCurrent];
+}
+
 
 @end
