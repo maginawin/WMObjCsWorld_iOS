@@ -28,6 +28,24 @@
     return (int)components.day;
 }
 
+- (int)hour {
+    NSCalendar* gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents* components = [gregorian components:NSCalendarUnitHour fromDate:self];
+    return (int)components.hour;
+}
+
+- (int)minute {
+    NSCalendar* gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents* components = [gregorian components:NSCalendarUnitMinute fromDate:self];
+    return (int)components.hour;
+}
+
+- (int)second {
+    NSCalendar* gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents* components = [gregorian components:NSCalendarUnitSecond fromDate:self];
+    return (int)components.hour;
+}
+
 - (int)dayOfWeek {
     NSCalendar* gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDateComponents* comps = [[NSDateComponents alloc] init];

@@ -26,6 +26,21 @@
 - (int)day;
 
 /**
+ * @return 当前日期的时
+ */
+- (int)hour;
+
+/**
+ * @return 当前日期的分
+ */
+- (int)minute;
+
+/**
+ * @return 当前日期的秒
+ */
+- (int)second;
+
+/**
  * @return 当前日期在一周中的天数, 周日 ~ 周六 1 ~ 7
  */
 - (int)dayOfWeek;
