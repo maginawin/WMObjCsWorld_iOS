@@ -37,13 +37,13 @@
 - (int)minute {
     NSCalendar* gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDateComponents* components = [gregorian components:NSCalendarUnitMinute fromDate:self];
-    return (int)components.hour;
+    return (int)components.minute;
 }
 
 - (int)second {
     NSCalendar* gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
     NSDateComponents* components = [gregorian components:NSCalendarUnitSecond fromDate:self];
-    return (int)components.hour;
+    return (int)components.second;
 }
 
 - (int)dayOfWeek {
