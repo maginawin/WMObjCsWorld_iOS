@@ -60,15 +60,19 @@
         
         _countTimer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:self selector:@selector(handleCountDown) userInfo:nil repeats:YES];
         
-        @try {
+        if ([self conformsToProtocol:@protocol(WMCountDownLabelDelegate)]) {
             [_delegate countDownLabelStart:self.tag];
         }
-        @catch (NSException *exception) {
-            NSLog(@"delegate countDownLabelStart exception : %@", exception);
-        }
-        @finally {
-            
-        }
+        
+//        @try {
+//            [_delegate countDownLabelStart:self.tag];
+//        }
+//        @catch (NSException *exception) {
+//            NSLog(@"delegate countDownLabelStart exception : %@", exception);
+//        }
+//        @finally {
+//            
+//        }
     }
 }
 
@@ -83,15 +87,19 @@
         _countTimer = nil;
     }
     
-    @try {
+    if ([self conformsToProtocol:@protocol(WMCountDownLabelDelegate)]) {
         [_delegate countDownLabelStop:self.tag];
     }
-    @catch (NSException *exception) {
-        NSLog(@"delegate countDownLabelStop exception : %@", exception);
-    }
-    @finally {
-
-    }
+    
+//    @try {
+//        [_delegate countDownLabelStop:self.tag];
+//    }
+//    @catch (NSException *exception) {
+//        NSLog(@"delegate countDownLabelStop exception : %@", exception);
+//    }
+//    @finally {
+//
+//    }
 }
 
 - (void)pause {
