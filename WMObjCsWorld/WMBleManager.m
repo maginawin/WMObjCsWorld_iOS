@@ -165,8 +165,6 @@ NSString* const kBleStopScanning = @"kBleStopScanning";
         [central cancelPeripheralConnection:peripheral];
         
         WMLog(@"didDisconnectPeripheral error : %@", error);
-
-        return;
     }
     
     [[NSNotificationCenter defaultCenter] postNotificationName:kBleCentralManagerDidDisconnectPeripheral object:peripheral];
@@ -185,7 +183,7 @@ NSString* const kBleStopScanning = @"kBleStopScanning";
 
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error {    
     if (error) {
-        return;
+        WMLog(@"didDiscoverServices error : %@", error);
     }
     
     [[NSNotificationCenter defaultCenter] postNotificationName:kBlePeripheralDidDiscoverServices object:peripheral];
@@ -200,7 +198,7 @@ NSString* const kBleStopScanning = @"kBleStopScanning";
 
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverCharacteristicsForService:(CBService *)service error:(NSError *)error {
     if (error) {
-        return;
+        WMLog(@"didDiscoverCharacteristicsForService error : %@", error);
     }
     
     NSArray* sendObjects = [NSArray arrayWithObjects:peripheral, service, nil];
