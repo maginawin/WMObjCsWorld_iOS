@@ -19,6 +19,12 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    NSDateFormatter* dft = [[NSDateFormatter alloc] init];
+    [dft setDateFormat:@"yyyyMMdd"];
+    
+    NSDate* temp = [dft dateFromString:@"20150219"];
+    WMLog(@"星座 : %@", [temp constellation]);
+    
     return YES;
 }
 
