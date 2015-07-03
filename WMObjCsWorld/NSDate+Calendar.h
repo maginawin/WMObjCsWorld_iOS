@@ -72,4 +72,11 @@
  */
 - (NSDate*)nextMonthDate:(NSDate*)date;
 
+/**
+ * @brief 根据当前日期, 返回其所在的星座
+ */
+- (NSString*)constellation;
+
++ (NSString*)constellationFromDate:(NSDate*)date;
+
 @end

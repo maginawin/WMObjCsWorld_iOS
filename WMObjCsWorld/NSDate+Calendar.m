@@ -108,4 +108,36 @@
     return [gregorian dateFromComponents:comps];
 }
 
+- (NSString*)constellation {
+    NSArray* constellations = @[@"摩羯座", @"水瓶座", @"双鱼座", @"白羊座", @"金牛座", @"双子座", @"巨蟹座", @"狮子座", @"处女座", @"天秤座", @"天蝎座", @"射手座", @"魔羯座"];
+    int indexs[] = {20, 19, 20, 20, 21, 21, 22, 23, 23, 23, 22, 21, 20};
+    
+    int month = [self month];
+    int day = [self day];
+    
+    int index = month;
+    if (day < indexs[month - 1]) {
+        index = index - 1;
+    }
+    
+    return (NSString*)constellations[index];    
+}
+
++ (NSString*)constellationFromDate:(NSDate*)date {
+    NSArray* constellations = @[@"摩羯座", @"水瓶座", @"双鱼座", @"白羊座", @"金牛座", @"双子座", @"巨蟹座", @"狮子座", @"处女座", @"天秤座", @"天蝎座", @"射手座", @"魔羯座"];
+    int indexs[] = {20, 19, 20, 20, 21, 21, 22, 23, 23, 23, 22, 21, 20};
+    
+    NSCalendar* gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+    NSDateComponents* components = [gregorian components:NSCalendarUnitDay | NSCalendarUnitMonth fromDate:date];
+    int month = (int)components.month;
+    int day = (int)components.day;
+    
+    int index = month;
+    if (day < indexs[month - 1]) {
+        index = index - 1;
+    }
+    
+    return (NSString*)constellations[index];
+}
+
 @end
