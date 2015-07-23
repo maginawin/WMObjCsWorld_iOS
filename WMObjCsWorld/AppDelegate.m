@@ -23,7 +23,7 @@
     [dft setDateFormat:@"yyyyMMdd"];
     
     NSDate* temp = [dft dateFromString:@"20150219"];
-    WMLog(@"星座 : %@", [temp constellation]);
+    WMLog(@"星座 : %@", [[NSDate date] constellation]);
     
     return YES;
 }

@@ -27,7 +27,6 @@
 		089315B41B27CA9A00765D3C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 089315B31B27CA9A00765D3C /* ViewController.m */; };
 		089315B71B27CA9A00765D3C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 089315B51B27CA9A00765D3C /* Main.storyboard */; };
 		089315B91B27CA9A00765D3C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 089315B81B27CA9A00765D3C /* Images.xcassets */; };
-		089315BC1B27CA9A00765D3C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 089315BA1B27CA9A00765D3C /* LaunchScreen.xib */; };
 		089315C81B27CA9A00765D3C /* WMObjCsWorldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 089315C71B27CA9A00765D3C /* WMObjCsWorldTests.m */; };
 		089315D81B27CD6000765D3C /* WMBleManagerDemo.m in Sources */ = {isa = PBXBuildFile; fileRef = 089315D71B27CD6000765D3C /* WMBleManagerDemo.m */; };
 		089315DC1B27CE5400765D3C /* WMBleManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 089315DA1B27CE5400765D3C /* WMBleManagerViewController.m */; };
@@ -82,7 +81,6 @@
 		089315B31B27CA9A00765D3C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		089315B61B27CA9A00765D3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		089315B81B27CA9A00765D3C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		089315BB1B27CA9A00765D3C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		089315C11B27CA9A00765D3C /* WMObjCsWorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WMObjCsWorldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		089315C61B27CA9A00765D3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		089315C71B27CA9A00765D3C /* WMObjCsWorldTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WMObjCsWorldTests.m; sourceTree = "<group>"; };
@@ -220,7 +218,6 @@
 				089315B31B27CA9A00765D3C /* ViewController.m */,
 				089315B51B27CA9A00765D3C /* Main.storyboard */,
 				089315B81B27CA9A00765D3C /* Images.xcassets */,
-				089315BA1B27CA9A00765D3C /* LaunchScreen.xib */,
 				089315AF1B27CA9A00765D3C /* WMObjCsWorld.xcdatamodeld */,
 				089315A81B27CA9A00765D3C /* Supporting Files */,
 			);
@@ -372,7 +369,6 @@
 				089315B71B27CA9A00765D3C /* Main.storyboard in Resources */,
 				089315E51B27D8E000765D3C /* WMBleTableViewCell.xib in Resources */,
 				0805B9B51B32518A003D2B10 /* WMSQLiteTableViewCell.xib in Resources */,
-				089315BC1B27CA9A00765D3C /* LaunchScreen.xib in Resources */,
 				0805B9B01B32514B003D2B10 /* WMSQLiteTableViewController.xib in Resources */,
 				0805B9C41B329E1A003D2B10 /* WMSQLiteUserViewController.xib in Resources */,
 				0805B9AB1B325029003D2B10 /* WMSQLiteViewController.xib in Resources */,
@@ -442,14 +438,6 @@
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		089315BA1B27CA9A00765D3C /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				089315BB1B27CA9A00765D3C /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -489,7 +477,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -526,7 +514,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -537,6 +525,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PREFIX_HEADER = /Users/maginawin/Documents/WwdDemo/WMObjCsWorld/WMObjCsWorld/prefix.pch;
 				INFOPLIST_FILE = WMObjCsWorld/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -549,6 +538,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PREFIX_HEADER = /Users/maginawin/Documents/WwdDemo/WMObjCsWorld/WMObjCsWorld/prefix.pch;
 				INFOPLIST_FILE = WMObjCsWorld/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;

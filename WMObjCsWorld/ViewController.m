@@ -29,6 +29,9 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (IBAction)scrollViewTestClick:(id)sender {
+}
+
 - (IBAction)bleManagerDemo:(id)sender {
     // 以下两种初始化方法都可以
     //    WMBleManagerViewController* bmVC = [[WMBleManagerViewController alloc] initWithNibName:@"WMBleManagerViewController" bundle:nil];
