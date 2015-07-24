@@ -61,17 +61,12 @@ NSString* const kBleStopScanning = @"kBleStopScanning";
     return self;
 }
 
-/**
- *  ============================================================
- *  继承自此类的就请实现这个 load 方法, 用于 App 初始化时初始化 ble 单例
- *  ============================================================
 + (void)load {
     __block id observer = [[NSNotificationCenter defaultCenter] addObserverForName:UIApplicationDidFinishLaunchingNotification object:nil queue:[NSOperationQueue mainQueue] usingBlock:^(NSNotification *note) {
         [self sharedInstance];
         [[NSNotificationCenter defaultCenter] removeObserver:observer];
     }];
 }
- */
 
 #pragma mark - Public Access
 
