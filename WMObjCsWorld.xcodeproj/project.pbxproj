@@ -35,6 +35,8 @@
 		089315E51B27D8E000765D3C /* WMBleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 089315E31B27D8E000765D3C /* WMBleTableViewCell.xib */; };
 		08F18FDF1B2EC7C80042AFA7 /* NSDate+Calendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F18FDE1B2EC7C80042AFA7 /* NSDate+Calendar.m */; };
 		08F43C211B2AA83300061B93 /* WMBleManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 08F43C201B2AA83300061B93 /* WMBleManager.m */; };
+		A4203CC21B64ADEC00F67212 /* WMBasicAnimationVC.m in Sources */ = {isa = PBXBuildFile; fileRef = A4203CC01B64ADEC00F67212 /* WMBasicAnimationVC.m */; };
+		A4203CC31B64ADEC00F67212 /* WMBasicAnimationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A4203CC11B64ADEC00F67212 /* WMBasicAnimationVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -97,6 +99,9 @@
 		08F18FDE1B2EC7C80042AFA7 /* NSDate+Calendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Calendar.m"; sourceTree = "<group>"; };
 		08F43C1F1B2AA83300061B93 /* WMBleManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMBleManager.h; sourceTree = "<group>"; };
 		08F43C201B2AA83300061B93 /* WMBleManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMBleManager.m; sourceTree = "<group>"; };
+		A4203CBF1B64ADEC00F67212 /* WMBasicAnimationVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMBasicAnimationVC.h; sourceTree = "<group>"; };
+		A4203CC01B64ADEC00F67212 /* WMBasicAnimationVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMBasicAnimationVC.m; sourceTree = "<group>"; };
+		A4203CC11B64ADEC00F67212 /* WMBasicAnimationVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WMBasicAnimationVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -207,6 +212,7 @@
 		089315A71B27CA9A00765D3C /* WMObjCsWorld */ = {
 			isa = PBXGroup;
 			children = (
+				A4203CBD1B64ADBD00F67212 /* 动画 */,
 				082D15DB1B33A7A1002AE09F /* 进度条 */,
 				0805B9A31B324E16003D2B10 /* SQL */,
 				08662A831B310EB0009BDD6D /* 倒计时 Label */,
@@ -283,6 +289,24 @@
 				08F18FDE1B2EC7C80042AFA7 /* NSDate+Calendar.m */,
 			);
 			name = "日期";
+			sourceTree = "<group>";
+		};
+		A4203CBD1B64ADBD00F67212 /* 动画 */ = {
+			isa = PBXGroup;
+			children = (
+				A4203CBE1B64ADC400F67212 /* CABasicAnimation */,
+			);
+			name = "动画";
+			sourceTree = "<group>";
+		};
+		A4203CBE1B64ADC400F67212 /* CABasicAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				A4203CBF1B64ADEC00F67212 /* WMBasicAnimationVC.h */,
+				A4203CC01B64ADEC00F67212 /* WMBasicAnimationVC.m */,
+				A4203CC11B64ADEC00F67212 /* WMBasicAnimationVC.xib */,
+			);
+			name = CABasicAnimation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -367,6 +391,7 @@
 			files = (
 				089315DD1B27CE5400765D3C /* WMBleManagerViewController.xib in Resources */,
 				089315B71B27CA9A00765D3C /* Main.storyboard in Resources */,
+				A4203CC31B64ADEC00F67212 /* WMBasicAnimationVC.xib in Resources */,
 				089315E51B27D8E000765D3C /* WMBleTableViewCell.xib in Resources */,
 				0805B9B51B32518A003D2B10 /* WMSQLiteTableViewCell.xib in Resources */,
 				0805B9B01B32514B003D2B10 /* WMSQLiteTableViewController.xib in Resources */,
@@ -407,6 +432,7 @@
 				0805B9BC1B32913E003D2B10 /* WMSQLiteManager.m in Sources */,
 				0805B9B41B32518A003D2B10 /* WMSQLiteTableViewCell.m in Sources */,
 				0805B9C31B329E1A003D2B10 /* WMSQLiteUserViewController.m in Sources */,
+				A4203CC21B64ADEC00F67212 /* WMBasicAnimationVC.m in Sources */,
 				08F18FDF1B2EC7C80042AFA7 /* NSDate+Calendar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -526,7 +552,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PREFIX_HEADER = /Users/maginawin/Documents/WwdDemo/WMObjCsWorld/WMObjCsWorld/prefix.pch;
+				GCC_PREFIX_HEADER = /Users/wangwendong/Documents/iOSCode/WMObjCsWorld_iOS/WMObjCsWorld/prefix.pch;
 				INFOPLIST_FILE = WMObjCsWorld/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -539,7 +565,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				GCC_PREFIX_HEADER = /Users/maginawin/Documents/WwdDemo/WMObjCsWorld/WMObjCsWorld/prefix.pch;
+				GCC_PREFIX_HEADER = /Users/wangwendong/Documents/iOSCode/WMObjCsWorld_iOS/WMObjCsWorld/prefix.pch;
 				INFOPLIST_FILE = WMObjCsWorld/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

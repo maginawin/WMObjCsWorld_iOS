@@ -13,6 +13,7 @@
 #import "WMSQLiteViewController.h"
 #import "WMSQLiteUserViewController.h"
 #import "WMCircleProgress.h"
+#import "WMBasicAnimationVC.h"
 
 @interface ViewController ()
 
@@ -27,6 +28,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+}
+
+- (IBAction)basicAnimClick:(id)sender {
+    WMBasicAnimationVC *basicAnimVC = [[WMBasicAnimationVC alloc] initWithNibName:@"WMBasicAnimationVC" bundle:nil];
+    
+    [self.navigationController pushViewController:basicAnimVC animated:YES];
 }
 
 - (IBAction)scrollViewTestClick:(id)sender {
