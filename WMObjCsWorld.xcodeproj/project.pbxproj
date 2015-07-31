@@ -21,6 +21,8 @@
 		0805B9C41B329E1A003D2B10 /* WMSQLiteUserViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0805B9C21B329E1A003D2B10 /* WMSQLiteUserViewController.xib */; };
 		082D15DF1B33A7C5002AE09F /* WMCircleProgress.m in Sources */ = {isa = PBXBuildFile; fileRef = 082D15DE1B33A7C5002AE09F /* WMCircleProgress.m */; };
 		08662A861B310ED9009BDD6D /* WMCountDownLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 08662A851B310ED9009BDD6D /* WMCountDownLabel.m */; };
+		088F070E1B6B837F007F51BB /* UIColor+FlatUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 088F070D1B6B837F007F51BB /* UIColor+FlatUI.m */; };
+		088F07101B6B83D3007F51BB /* Flat-UI-Colors.png in Resources */ = {isa = PBXBuildFile; fileRef = 088F070F1B6B83D3007F51BB /* Flat-UI-Colors.png */; };
 		089315AB1B27CA9A00765D3C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 089315AA1B27CA9A00765D3C /* main.m */; };
 		089315AE1B27CA9A00765D3C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 089315AD1B27CA9A00765D3C /* AppDelegate.m */; };
 		089315B11B27CA9A00765D3C /* WMObjCsWorld.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 089315AF1B27CA9A00765D3C /* WMObjCsWorld.xcdatamodeld */; };
@@ -73,6 +75,9 @@
 		082D15DE1B33A7C5002AE09F /* WMCircleProgress.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCircleProgress.m; sourceTree = "<group>"; };
 		08662A841B310ED9009BDD6D /* WMCountDownLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WMCountDownLabel.h; sourceTree = "<group>"; };
 		08662A851B310ED9009BDD6D /* WMCountDownLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WMCountDownLabel.m; sourceTree = "<group>"; };
+		088F070C1B6B837F007F51BB /* UIColor+FlatUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+FlatUI.h"; sourceTree = "<group>"; };
+		088F070D1B6B837F007F51BB /* UIColor+FlatUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+FlatUI.m"; sourceTree = "<group>"; };
+		088F070F1B6B83D3007F51BB /* Flat-UI-Colors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Flat-UI-Colors.png"; sourceTree = "<group>"; };
 		089315A51B27CA9A00765D3C /* WMObjCsWorld.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WMObjCsWorld.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		089315A91B27CA9A00765D3C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		089315AA1B27CA9A00765D3C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -190,6 +195,26 @@
 			name = "倒计时 Label";
 			sourceTree = "<group>";
 		};
+		088F070B1B6B834B007F51BB /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				088F07111B6B8B4A007F51BB /* UIColor */,
+				08F18FDD1B2EC7C80042AFA7 /* NSDate+Calendar.h */,
+				08F18FDE1B2EC7C80042AFA7 /* NSDate+Calendar.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		088F07111B6B8B4A007F51BB /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				088F070C1B6B837F007F51BB /* UIColor+FlatUI.h */,
+				088F070D1B6B837F007F51BB /* UIColor+FlatUI.m */,
+				088F070F1B6B83D3007F51BB /* Flat-UI-Colors.png */,
+			);
+			name = UIColor;
+			sourceTree = "<group>";
+		};
 		0893159C1B27CA9A00765D3C = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +237,7 @@
 		089315A71B27CA9A00765D3C /* WMObjCsWorld */ = {
 			isa = PBXGroup;
 			children = (
+				088F070B1B6B834B007F51BB /* Category */,
 				A4203CBD1B64ADBD00F67212 /* 动画 */,
 				082D15DB1B33A7A1002AE09F /* 进度条 */,
 				0805B9A31B324E16003D2B10 /* SQL */,
@@ -285,8 +311,6 @@
 		08F18FDC1B2EC7980042AFA7 /* 日期 */ = {
 			isa = PBXGroup;
 			children = (
-				08F18FDD1B2EC7C80042AFA7 /* NSDate+Calendar.h */,
-				08F18FDE1B2EC7C80042AFA7 /* NSDate+Calendar.m */,
 			);
 			name = "日期";
 			sourceTree = "<group>";
@@ -389,6 +413,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				088F07101B6B83D3007F51BB /* Flat-UI-Colors.png in Resources */,
 				089315DD1B27CE5400765D3C /* WMBleManagerViewController.xib in Resources */,
 				089315B71B27CA9A00765D3C /* Main.storyboard in Resources */,
 				A4203CC31B64ADEC00F67212 /* WMBasicAnimationVC.xib in Resources */,
@@ -434,6 +459,7 @@
 				0805B9C31B329E1A003D2B10 /* WMSQLiteUserViewController.m in Sources */,
 				A4203CC21B64ADEC00F67212 /* WMBasicAnimationVC.m in Sources */,
 				08F18FDF1B2EC7C80042AFA7 /* NSDate+Calendar.m in Sources */,
+				088F070E1B6B837F007F51BB /* UIColor+FlatUI.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
