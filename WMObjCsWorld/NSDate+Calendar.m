@@ -140,4 +140,21 @@
     return (NSString*)constellations[index];
 }
 
+- (BOOL)isToday {
+    int year = [self year];
+    int month = [self month];
+    int day = [self day];
+    
+    NSDate *today = [NSDate date];
+    int year1 = [today year];
+    int month1 = [today month];
+    int day1 = [today day];
+    
+    if (year == year1 && month == month1 && day == day1) {
+        return YES;
+    } else {
+        return NO;
+    }
+}
+
 @end

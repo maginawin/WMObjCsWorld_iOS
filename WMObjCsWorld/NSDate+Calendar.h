@@ -79,4 +79,6 @@
 
 + (NSString*)constellationFromDate:(NSDate*)date;
 
+- (BOOL)isToday;
+
 @end
