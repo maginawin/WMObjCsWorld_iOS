@@ -141,16 +141,13 @@
 }
 
 - (BOOL)isToday {
-    int year = [self year];
-    int month = [self month];
-    int day = [self day];
+    NSDateFormatter *dft = [[NSDateFormatter alloc] init];
+    [dft setDateFormat:@"yyyy-MM-dd"];
     
-    NSDate *today = [NSDate date];
-    int year1 = [today year];
-    int month1 = [today month];
-    int day1 = [today day];
+    NSString *dateString = [dft stringFromDate:self];
+    NSString *todayString = [dft stringFromDate:[NSDate date]];
     
-    if (year == year1 && month == month1 && day == day1) {
+    if ([dateString isEqualToString:todayString]) {
         return YES;
     } else {
         return NO;
